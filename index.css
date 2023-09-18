@@ -187,8 +187,46 @@ aside.related {
     margin-top: 1.6rem;
 }
 
-.wrapper-header {
-    box-shadow: inset 0 -0.1rem var(--grey);
+.article-container {
+    position: relative;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.related-article {
+    text-decoration: none;
+    /* Remove underlines */
+    color: green;
+    justify-content: flex-start;
+    /* Set text color to green */
+}
+
+
+/* Adjust the selector to target the button element inside .related-article */
+
+.related-article button {
+    color: green;
+    /* Set button text color to green */
+    background-color: white;
+    /* Set button background color to white */
+    border: 1px solid green;
+    /* Add a border to the button */
+    padding: 5px 10px;
+    /* Adjust button padding */
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    box-shadow: 0px 0px 5px #333;
+    /* Add a dark shadow to the button */
+}
+
+
+/* Add hover effect for the button */
+
+.related-article button:hover {
+    background-color: green;
+    color: white;
 }
 
 .tag {
