@@ -10,22 +10,43 @@
 
 <body>
     <div class="wrapper-outer wrapper-header">
-        <header class="site_header wrapper-inner">
-            <a class="logo" href="https://i.ibb.co/fqDdhKD/IMG-3100.png">
-                <p>Bloom 9ja</p>
-            </a>
-            <a href="https://i.ibb.co/fqDdhKD/IMG-3100.png" title="logo" class="logo"></a>
-            <nav class="menu">
-                <ul class="menu-items">
-                    <li><a href="" class="menu-item">About</a></li>
-                    <li><a href="" class="menu-item">Blog</a></li>
-                    <li><a href="" class="menu-item">Shop</a></li>
-                    <li><a href="" class="menu-item">Contact</li></a>
-                </ul>
+        <header class="site-header">
+
+            <nav>
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="https://i.ibb.co/5BmjzyS/IMG-4300.png" width="150px" height="80px" alt="Logo" />
+                        </a>
+                    </div>
+                    <div id="navToggle" class="toggle-bars">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+
+                    </div>
+                </div>
+
+                <div id="navMenu" class="nav">
+                    <ul>
+                        <li>
+                            <a href="index.html">Music</a>
+                        </li>
+                        <li><a href="work.html">Featured</a></li>
+                        <li><a href="about.html">New</a></li>
+                        <li><a href="contact.html">About</a></li>
+
+                    </ul>
+                </div>
             </nav>
-            <div class="site-actions">
-                <i class="fas fa-search"></i>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search articles">
+                <button type="button">Search</button>
             </div>
+
+
         </header>
     </div>
     <div class="wrapper-outer wrapper-article">
@@ -36,9 +57,9 @@
             </figure>
             <header class="article_header">
                 <section class="article-tags">
-                    <a class="tag" rel="tag" href="">Music</a>
-                    <a class="tag" rel="tag" href="">Featured</a>
-                    <a class="tag" rel="tag" href="">New</a>
+                    <a class="tag" rel="tag" href="music.html">Music</a>
+                    <a class="tag" rel="tag" href="featured.html">Featured</a>
+                    <a class="tag" rel="tag" href="New.html">New</a>
                 </section>
                 <h1 class="article_title">Rema is the biggest Afro beats star right now</h1>
                 <p class="article-subhead">
@@ -126,6 +147,27 @@
                 </div>
         </aside>
         </div>
+        <div class="support-icon">
+            <a href="#" class="support-chat-icon">Chat with Support</a>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="copyright">
+                    &copy; 2023 Bloom 9ja All rights reserved.
+                </div>
+                <div class="support">
+                    Support: <a href="mailto:support@example.com">support@Bloom9ja.com</a>
+                </div>
+        </footer>
+        <script src="index.js"></script>
+        <script>
+            // Disable right-click context menu
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+            });
+        </script>
+
+
 </body>
 
 </html>

@@ -1,10 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    position: relative;
-}
-
 html {
     font-size: 10px;
 }
@@ -15,12 +8,249 @@ body {
     font-size: 24px;
 }
 
+
+/* Header */
+
 .logo {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Lora', serif;
-    font-size: 2.4rem;
-    align-items: center;
-    justify-items: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: -15px;
 }
+
+.toggle-bars {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.toggle-bars .bar {
+    width: 35px;
+    background-color: #262525;
+    margin: 7px 0;
+    height: 2px;
+}
+
+
+/* existing styles for .toggle-bars and .toggle-bars .bar background-image: linear-gradient(90deg, #ffffff, #bd95bd); */
+
+
+/* Styles for the header content */
+
+.header-content {
+    display: flex;
+    align-items: center;
+    /* Vertically center-align items */
+    justify-content: space-between;
+    /* Distribute space between items */
+}
+
+nav {
+    padding: 20px 30px;
+    background-color: #ffffff;
+    color: #141314;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 50px;
+    position: relative;
+    border-radius: 0px;
+}
+
+.nav {
+    display: none;
+    color: #141314;
+}
+
+div#navMenu.nav {
+    color: #141314;
+}
+
+.show {
+    display: block !important;
+    color: #1b1a1a;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: -20px;
+    margin-top: 15px;
+    color: #242222;
+}
+
+.nav ul li a {
+    padding: 10px 20px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #141314;
+    text-decoration: none;
+}
+
+@media screen and (min-width:600px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 20px 30px;
+        background-color: #ffffff;
+        color: #181616;
+    }
+    .toggle-bars {
+        display: none;
+    }
+    .nav {
+        display: block;
+    }
+    .nav ul {
+        display: flex;
+    }
+    .nav ul li a {
+        padding: 0 20px;
+        font-size: 10px;
+        color: #211f1f;
+    }
+}
+
+
+/* Toggle Bars Box */
+
+.toggle-bars {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+    background-color: rgb(15, 16, 15);
+    /* Set the initial background color to transparent */
+    padding: 5px;
+    /* Add padding to create a box */
+    border-radius: 5px;
+    /* Add border-radius for rounded corners */
+    transition: background-color 0.3s;
+    /* Add a smooth transition for the background color */
+}
+
+.toggle-bars:hover {
+    background-color: rgb(59, 125, 59);
+    /* Change the background color on hover */
+}
+
+
+/* Toggle Bars Bars */
+
+.toggle-bars .bar {
+    width: 35px;
+    background-color: #ffffff;
+    margin: 7px 0;
+    height: 2px;
+}
+
+
+/* Center the search bar */
+
+.search-bar {
+    text-align: center;
+    /* Center-align the text and button */
+    margin: 0 auto;
+    /* Horizontally center the search bar */
+    max-width: 400px;
+    /* Set a maximum width for the search bar */
+}
+
+
+/* Style the input field */
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+
+/* Style the search button */
+
+.search-bar button {
+    background-color: #262525;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+/* Hover effect for the search button */
+
+.search-bar button:hover {
+    background-color: rgb(59, 125, 59);
+    /* Change the background color on hover */
+}
+
+
+/* Add some margin for spacing */
+
+.search-bar input[type="text"],
+.search-bar button {
+    margin: 5px;
+}
+
+
+/* Footer */
+
+.site-footer {
+    background-color: rgb(21, 22, 21);
+    padding: 20px 0;
+    text-align: center;
+    text-decoration: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    color: white;
+    /* Text color for the footer */
+}
+
+.footer-content {
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    /* Adjust padding as needed */
+}
+
+.copyright {
+    font-size: 14px;
+    /* Adjust font size as needed */
+    text-decoration: none;
+}
+
+.support {
+    font-size: 14px;
+    /* Adjust font size as needed */
+    text-decoration: none;
+}
+
+
+/* Support Icon */
+
+.support-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    /* Add styling for your support icon here */
+    text-decoration: none;
+}
+
+
+/* Add this CSS to your existing stylesheet */
 
 h1 {
     font-family: 'Raleway', sans-serif;
@@ -67,13 +297,6 @@ button {
     display: block;
 }
 
-.logo,
-.menu-item,
-.tag {
-    color: inherit;
-    text-decoration: none;
-}
-
 figure {
     display: block;
     width: 100%;
@@ -98,13 +321,6 @@ figure img {
     max-width: 90rem;
     margin: auto;
     padding: 2.4rem 0;
-}
-
-.site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #6666ff;
 }
 
 .menu-items,
@@ -158,6 +374,7 @@ aside.related {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 1.6rem;
+    margin-bottom: 50px;
 }
 
 .related-article {
