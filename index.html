@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bloom 9ja - Music Blog</title>
     <link rel="stylesheet" href="index.css">
+    <style>
+        .article-subhead i {
+            color: rgb(59, 125, 59);
+        }
+    </style>
 </head>
 
 <body>
@@ -23,18 +28,17 @@
                         <div class="bar"></div>
                         <div class="bar"></div>
                         <div class="bar"></div>
-
                     </div>
                 </div>
 
                 <div id="navMenu" class="nav">
                     <ul>
                         <li>
-                            <a href="index.html">Music</a>
+                            <a href="music.html">Music</a>
                         </li>
-                        <li><a href="work.html">Featured</a></li>
-                        <li><a href="about.html">New</a></li>
-                        <li><a href="contact.html">About</a></li>
+                        <li><a href="featured.html">Featured</a></li>
+                        <li><a href="New.html">New</a></li>
+                        <li><a href="about.html">About</a></li>
 
                     </ul>
                 </div>
@@ -63,7 +67,8 @@
                 </section>
                 <h1 class="article_title">Rema is the biggest Afro beats star right now</h1>
                 <p class="article-subhead">
-                    <i>Wiz Kid's biggest hits, "Ojuelegba" has been crowned as the greatest song on Billboard Hot 100's list.</i></p>
+                    <i id="redirectLink">Wiz Kid 's biggest hits, "Ojuelegba" has been crowned as the greatest song on Billboard Hot 100's list.</i>
+                </p>
                 <div class="article-meta">
                     <img class="avatar" src="https://i.ibb.co/R6V1y1W/user.png" alt="Bloom9ja" />
                     <p class="byline">
@@ -155,9 +160,9 @@
                 <div class="copyright">
                     &copy; 2023 Bloom 9ja All rights reserved.
                 </div>
-                <div class="support">
-                    Support: <a href="mailto:support@example.com">support@Bloom9ja.com</a>
-                </div>
+                <!----- <div class="support">
+                Support: <a href="mailto:support@example.com">support@Bloom9ja.com</a>---
+            </div>--->
         </footer>
         <script src="index.js"></script>
         <script>
@@ -166,6 +171,20 @@
                 e.preventDefault();
             });
         </script>
+        <script>
+            // Get a reference to the <i> element by its id
+            const redirectLink = document.getElementById('redirectLink');
+
+            // Add a click event listener to the <i> element
+            redirectLink.addEventListener('click', function() {
+                // Specify the URL you want to redirect to
+                const redirectURL = 'music.html'; // Replace with your desired URL
+
+                // Redirect to the specified URL
+                window.location.href = redirectURL;
+            });
+        </script>
+
 
 
 </body>

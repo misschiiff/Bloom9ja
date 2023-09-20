@@ -32,10 +32,13 @@ body {
 }
 
 
-/* existing styles for .toggle-bars and .toggle-bars .bar background-image: linear-gradient(90deg, #ffffff, #bd95bd); */
-
-
 /* Styles for the header content */
+
+
+/*  header.site-header {
+    position: fixed;
+    }
+    */
 
 .header-content {
     display: flex;
@@ -187,7 +190,7 @@ div#navMenu.nav {
 /* Hover effect for the search button */
 
 .search-bar button:hover {
-    background-color: rgb(59, 125, 59);
+    background-color: #3b7d3b;
     /* Change the background color on hover */
 }
 
@@ -197,6 +200,258 @@ div#navMenu.nav {
 .search-bar input[type="text"],
 .search-bar button {
     margin: 5px;
+}
+
+
+/* styles for fetured page */
+
+
+/* Container for the entire comment section */
+
+.comments-section {
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    background-color: #f9f9f9;
+}
+
+
+/* Title for the comment section */
+
+.comments-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+
+/* Comment list */
+
+#comments-list {
+    margin-top: 20px;
+}
+
+
+/* Individual comment */
+
+.comment {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+}
+
+.comment .author {
+    font-weight: bold;
+    color: #333;
+}
+
+.comment .date {
+    font-size: 12px;
+    color: #888;
+}
+
+.comment .text {
+    margin-top: 10px;
+    color: #444;
+}
+
+
+/* Comment form */
+
+#comment-form {
+    margin-top: 20px;
+}
+
+#comment-form input,
+#comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+}
+
+#comment-form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#comment-form button:hover {
+    background-color: #555;
+}
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 27px;
+    line-height: 140%;
+}
+
+h2 {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 25px;
+    line-height: 180%;
+}
+
+p {
+    line-height: 200%;
+}
+
+p+p {
+    margin-top: 1.2rem;
+}
+
+.button {
+    padding: 0.4rem 1rem;
+    border: none;
+    background: linear-gradient(to bottom left, #3b7d3b 0%, #a3f9a3 100%);
+    color: white;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+}
+
+.button:hover {
+    background: linear-gradient(to bottom left, #3b7d3b 0%, #a3f9a3 100%);
+}
+
+figure {
+    padding: 0.8rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.title-topic {
+    text-align: center;
+    font-size: 35px;
+}
+
+.subtitle {
+    font-size: 20px;
+}
+
+figcaption {
+    font-size: 15px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.input {
+    border: 0.1rem;
+    height: 2.8rem;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 3.6rem;
+}
+
+.article-content {
+    display: flex;
+    box-direction: column;
+}
+
+.wrap-action {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.subscribe {
+    padding: 1.2rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+
+/* Existing styles for the button */
+
+.read-more-button {
+    background-color: transparent;
+    border: 2px solid #333;
+    color: #333;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Add hover effect */
+
+.read-more-button:hover {
+    background-color: black;
+    color: rgb(59, 125, 59);
+    /* Green color */
+}
+
+
+/* Basic styles for article cards */
+
+.article-card {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    /* Adjust as needed for your layout */
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+/* Media query for mobile responsiveness */
+
+@media (max-width: 768px) {
+    .article-card {
+        width: 100%;
+        /* Make it full width on mobile */
+        display: block;
+        /* Stack vertically on mobile */
+    }
+}
+
+article#feat {
+    font-family: 'Roboto', sans-serif;
+    width: 90%;
+    max-width: 80rem;
+    margin: auto;
+    padding: 4rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+.section--text {
+    margin-top: 1.6rem;
+}
+
+.wrapper-action button {
+    font-size: 1.8rem;
+}
+
+aside.newsletter {
+    padding: 1.6rem;
+    background: linear-gradient(to bottom right, #ffffff 0%, #a3f9a3 100%);
+    border-radius: 0.4rem;
+    margin-bottom: 100px;
 }
 
 

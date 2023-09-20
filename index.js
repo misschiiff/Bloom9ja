@@ -23,3 +23,37 @@ searchInput.addEventListener('input', () => {
         }
     });
 });
+// JavaScript for handling "Read More" button click
+document.addEventListener("DOMContentLoaded", function() {
+    const readMoreButtons = document.querySelectorAll(".read-more-button");
+
+    readMoreButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const articleContent = this.parentNode.querySelector(".article-content");
+            articleContent.classList.toggle("show-content");
+
+            // Change button text
+            this.innerText = articleContent.classList.contains("show-content") ? "Read Less" : "Read More";
+        });
+    });
+});
+
+// JavaScript code to handle form submission and comment display
+document.addEventListener("DOMContentLoaded", function() {
+    const commentsList = document.getElementById("comments-list");
+    const commentForm = document.getElementById("comment-form");
+
+    commentForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const comment = document.getElementById("comment").value;
+
+        // Send comment data to the server via AJAX and handle the response
+        // Insert the new comment into the commentsList
+    });
+
+    // Fetch and display comments from the server on page load
+    // Use AJAX to retrieve comments from the server
+});
