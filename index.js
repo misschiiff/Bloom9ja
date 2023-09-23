@@ -57,3 +57,14 @@ document.addEventListener("DOMContentLoaded", function() {
     // Fetch and display comments from the server on page load
     // Use AJAX to retrieve comments from the server
 });
+
+// Example JavaScript for page transitions
+const formContainer = document.querySelector('.form-container');
+const toggleButton = document.querySelector('.toggle-button');
+
+toggleButton.addEventListener('click', () => {
+    formContainer.classList.toggle('hidden');
+});
+// Example JavaScript for adding fade-in class
+const successMessage = document.querySelector('.success-message');
+successMessage.classList.add('fade-in');
