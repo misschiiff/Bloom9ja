@@ -18,6 +18,18 @@ body {
     margin-left: 5px;
 }
 
+
+/* Media query for screens with a maximum width of 768px (adjust this value as needed) */
+
+@media (max-width: 768px) {
+    /* Center the logo horizontally */
+    .logo {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}
+
 .toggle-bars {
     position: absolute;
     top: 20px;
