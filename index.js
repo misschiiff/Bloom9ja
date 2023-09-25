@@ -68,3 +68,19 @@ toggleButton.addEventListener('click', () => {
 // Example JavaScript for adding fade-in class
 const successMessage = document.querySelector('.success-message');
 successMessage.classList.add('fade-in');
+
+// JavaScript code for translations and animations
+
+// Function to change content based on selected language
+function translateTo(language) {
+    // Implement translation logic here
+}
+
+// Event listeners for language buttons
+document.getElementById("translate-en").addEventListener("click", function() {
+    translateTo("en");
+});
+
+document.getElementById("translate-es").addEventListener("click", function() {
+    translateTo("es");
+});
