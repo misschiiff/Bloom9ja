@@ -157,12 +157,27 @@
     /* Center the search bar */
     
     .search-bar {
-        text-align: center;
-        /* Center-align the text and button */
-        margin: 0 auto;
+        text-align: left;
+        /* align the text and button */
         /* Horizontally center the search bar */
-        max-width: 400px;
+        margin-left: 30px;
+        margin-right: 600px;
         /* Set a maximum width for the search bar */
+        justify-content: flex-start;
+    }
+    
+    @media (max-width: 768px) {
+        /* Center the logo horizontally */
+        /* Align the logo to the left */
+        .search-bar {
+            text-align: left;
+            /* align the text and button */
+            /* Horizontally center the search bar */
+            margin-left: 30px;
+            margin-right: 200px;
+            /* Set a maximum width for the search bar */
+            justify-content: flex-start;
+        }
     }
     /* Style the input field */
     
