@@ -84,3 +84,43 @@ document.getElementById("translate-en").addEventListener("click", function() {
 document.getElementById("translate-es").addEventListener("click", function() {
     translateTo("es");
 });
+
+// JavaScript for updating and displaying the shopping cart
+document.addEventListener("DOMContentLoaded", function() {
+    const cartItems = [];
+    const cartCount = document.getElementById("cart-count");
+    const cartTotal = document.getElementById("cart-total");
+    const cartList = document.getElementById("cart-items");
+
+    const productButtons = document.querySelectorAll(".add-to-cart");
+
+    productButtons.forEach((button) => {
+        button.addEventListener("click", function() {
+            const price = parseFloat(button.getAttribute("data-price"));
+            cartItems.push(price);
+            updateCart();
+        });
+    });
+
+    function updateCart() {
+        const itemCount = cartItems.length;
+        const total = cartItems.reduce((sum, price) => sum + price, 0);
+        cartCount.textContent = itemCount;
+        cartTotal.textContent = total.toFixed(2);
+
+        cartList.innerHTML = "";
+        cartItems.forEach((price, index) => {
+            const listItem = document.createElement("li");
+            listItem.textContent = `Item ${index + 1}: $${price.toFixed(2)}`;
+            cartList.appendChild(listItem);
+        });
+    }
+});
+
+// JavaScript for handling checkout
+const checkoutButton = document.getElementById("checkout-button");
+
+checkoutButton.addEventListener("click", function() {
+    const shippingForm = document.getElementById("shipping-form");
+    shippingForm.submit(); // Trigger the shipping form submission
+});

@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop for print - Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="index.css">
+    <title>Shop for Print - Dashboard</title>
 </head>
 
 <body>
     <div class="wrapper-outer wrapper-header">
         <header class="site-header">
-
             <nav>
                 <div class="header-content">
                     <div class="logo">
@@ -28,51 +28,89 @@
 
                 <div id="navMenu" class="nav">
                     <ul>
-                        <li>
-                            <a href="music.html">Music</a>
-                        </li>
+                        <li><a href="music.html">Music</a></li>
                         <li><a href="featured.html">Featured</a></li>
                         <li><a href="New.html">New</a></li>
-                        <li>
-                            <a href="shop.html">Shop</a>
-                        </li>
+                        <li><a href="shop.html">Shop</a></li>
                         <li><a href="about.html">About</a></li>
                         <li class="nav-button"><a href="login.html">Sign In</a></li>
                         <li class="nav-button"><a href="register.html">Sign Up</a></li>
-
                     </ul>
                 </div>
             </nav>
 
-            <!-- Search Bar -->
-            <div class="search-bar">
-                <input type="text" id="search-input" placeholder="Search articles">
-                <button type="button">Search</button>
+
+            <section class="checkout">
+                <div class="cart-container">
+                    <div id="cart" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </div>
+                    <button id="place-order">Proceed to Checkout</button>
+                </div>
+
+            </section>
+        </header>
+
+        <section class="products">
+
+            <!-- Product listings here -->
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <h2>Street Motivator</h2>
+                <p>Motivator t-shirt</p>
+                <p>$10.99</p>
+                <button class="add-to-cart" data-price="10.99">Add to Cart</button>
             </div>
 
 
-        </header>
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="product2.jpg" alt="Product 2">
+                <h2>Afro Beats</h2>
+                <p>Fela print t-shirt</p>
+                <p>$15.99</p>
+                <button class="add-to-cart" data-price="15.99">Add to Cart</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product">
+                <img src="product3.jpg" alt="Product 3">
+                <h2>Fear</h2>
+                <p>How to control it</p>
+                <p>$12.99</p>
+                <button class="add-to-cart" data-price="12.99">Add to Cart</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product">
+                <img src="product3.jpg" alt="Product 4">
+                <h2>Bloom Box</h2>
+                <p>Bluetooth Speakers</p>
+                <p>$12.99</p>
+                <button class="add-to-cart" data-price="12.99">Add to Cart</button>
+            </div>
+        </section>
+
+        <section class="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be added here using JavaScript -->
+            </ul>
+            <p>Total: $<span id="cart-total">0.00</span></p>
+        </section>
     </div>
+
+    <section class="user-profile">
+        <h2>User Profile</h2>
+        <!-- User authentication and profile information here -->
+    </section>
+
+    <footer>
+        <!-- Footer content with links to privacy policy, terms of service, etc. -->
+    </footer>
+
     <script src="index.js"></script>
-    <script>
-        // Disable right-click context menu
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
-    </script>
-    <script>
-        // Get a reference to the <i> element by its id
-        const redirectLink = document.getElementById('redirectLink');
-
-        // Add a click event listener to the <i> element
-        redirectLink.addEventListener('click', function() {
-            // Specify the URL you want to redirect to
-            const redirectURL = 'music.html'; // Replace with your desired URL
-
-            // Redirect to the specified URL
-            window.location.href = redirectURL;
-        });
-    </script>
 </body>
 
 </html>

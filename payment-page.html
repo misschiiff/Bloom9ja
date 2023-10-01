@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <!-- Include the Paystack inline script -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        
+        .payment-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+        }
+        
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        input[type="email"],
+        input[type="number"] {
+            width: 20%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav>
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://i.ibb.co/5BmjzyS/IMG-4300.png" width="150px" height="80px" alt="Logo" />
+                    </a>
+                </div>
+
+        </nav>
+        <div class="payment-container">
+            <h1>Minimal Payment Page</h1>
+            <form id="payment-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="amount">Amount (NGN):</label>
+                <input type="number" id="amount" required>
+
+                <button type="button" id="pay-button">Pay Now</button>
+            </form>
+        </div>
+
+        <!-- JavaScript code for Paystack integration -->
+        <script src="payment.js"></script>
+</body>
+
+</html>
