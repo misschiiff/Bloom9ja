@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom 9ja - Music Blog</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .article-subhead i {
+            color: rgb(59, 125, 59);
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i.ibb.co/7rGVBJB/Music-cuate.png');
+            /* Replace 'background.jpg' with your actual background image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        /* For mobile devices (less than 768px wide) */
+        
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        
+        .card {
+            background-color: #201f1f;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: 20%;
+            margin-right: 20px;
+            height: 40px;
+            justify-content: left;
+            margin-right: 20px;
+        }
+        
+        .card:hover {
+            background-color: #3b7d3b;
+            transform: scale(1.05);
+        }
+        
+        .card-content h2 {
+            margin-top: 0;
+            font-size: 20px;
+            color: #ffffff;
+            margin-bottom: 500px;
+            justify-content: left;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                background-position: right center;
+                /* Align background image to middle right */
+            }
+            .card-container {
+                flex-direction: column;
+                align-items: flex-start;
+                /* Align cards to the bottom left */
+                padding: 20px 10px;
+                /* Adjust padding for mobile */
+            }
+            .card {
+                width: 80%;
+                margin-bottom: 20px;
+                margin-right: 0;
+                /* No margin between mobile cards */
+            }
+        }
+        
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper-outer wrapper-header">
+        <header class="site-header">
+
+            <nav>
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="https://i.ibb.co/LZs8Lgv/IMG-4439.png" alt="Logo" width="150px" height="80px" border="0" />
+
+                        </a>
+                    </div>
+                    <div id="navToggle" class="toggle-bars">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+
+                <div id="navMenu" class="nav">
+                    <ul>
+                        <li>
+                            <a href="music.html">Music</a>
+                        </li>
+                        <li><a href="featured.html">Featured</a></li>
+                        <li><a href="New.html">New</a></li>
+                        <li>
+                            <a href="shop.html">Shop</a>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="nav-button"><a href="login.html">Sign In</a></li>
+                        <li class="nav-button"><a href="register.html">Sign Up</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+
+
+
+        </header>
+    </div>
+    <div class="card-container">
+        <i id="redirectLink"> <div class="card"><i>
+
+            <div class="card-content">
+
+                <h2>Trending
+                </h2>
+
+            </div>
+        </div>
+        <i id="redirectLink">
+        <div class="card"></i>
+
+        <div class="card-content" href="New.html">
+            <h2>Featured</h2>
+            <p>Hot right now</p>
+        </div>
+    </div>
+    <i id="redirectLink">
+    <div class="card">
+        </i>
+
+    <div class="card-content" href="featured.html">
+        <h2>More</h2>
+        <p>Experience our products</p>
+    </div>
+    </div>
+    </div>
+    <div class="support-icon">
+        <a href="#" class="support-chat-icon">Chat with Support</a>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="copyright">
+                &copy; 2023 Bloom 9ja All rights reserved.
+            </div>
+            <!----- <div class="support">
+                Support: <a href="mailto:support@example.com">support@Bloom9ja.com</a>---
+            </div>--->
+    </footer>
+    <script src="index.js"></script>
+    <script>
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
+    <script>
+        // Get a reference to the <i> element by its id
+        const redirectLink = document.getElementById('redirectLink');
+
+        // Add a click event listener to the <i> element
+        redirectLink.addEventListener('click', function() {
+            // Specify the URL you want to redirect to
+            const redirectURL = 'music.html'; // Replace with your desired URL
+
+            // Redirect to the specified URL
+            window.location.href = redirectURL;
+        });
+    </script>
+
+
+
+</body>
+
+</html>
