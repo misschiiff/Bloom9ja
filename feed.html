@@ -6,84 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bloom 9ja - Music Blog</title>
     <link rel="stylesheet" href="index.css">
-    <style>
-        .article-subhead i {
-            color: rgb(59, 125, 59);
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-            background-image: url('https://i.ibb.co/7rGVBJB/Music-cuate.png');
-            /* Replace 'background.jpg' with your actual background image path */
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        /* For mobile devices (less than 768px wide) */
-        
-        .card-container {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-        }
-        
-        .card {
-            background-color: #201f1f;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            width: 20%;
-            margin-right: 20px;
-            height: 40px;
-            justify-content: left;
-            margin-right: 20px;
-        }
-        
-        .card:hover {
-            background-color: #3b7d3b;
-            transform: scale(1.05);
-        }
-        
-        .card-content h2 {
-            margin-top: 0;
-            font-size: 20px;
-            color: #ffffff;
-            margin-bottom: 500px;
-            justify-content: left;
-        }
-        
-        @media (max-width: 768px) {
-            body {
-                background-position: right center;
-                /* Align background image to middle right */
-            }
-            .card-container {
-                flex-direction: column;
-                align-items: flex-start;
-                /* Align cards to the bottom left */
-                padding: 20px 10px;
-                /* Adjust padding for mobile */
-            }
-            .card {
-                width: 80%;
-                margin-bottom: 20px;
-                margin-right: 0;
-                /* No margin between mobile cards */
-            }
-        }
-        
-        .background-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
-        }
-    </style>
+    <link rel="stylesheet" href="feed.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
+
 </head>
 
 <body>
@@ -127,37 +54,124 @@
 
         </header>
     </div>
-    <div class="card-container">
-        <i id="redirectLink"> <div class="card"><i>
+    <main class="Main">
+        <h1>Mostly CSS Responsive Carousel</h1>
 
-            <div class="card-content">
+        <section class="Carousel" id="carousel" tabindex="-1">
+            <h2 class="Hidden">Carousel</h2>
+            <article class="Card Card--overlay Card--square" id="card-1">
+                <div class="Card__media">
+                    <img class="Card__image" alt="Card image description" width="480" height="480" loading="lazy" src="https://images.unsplash.com/photo-1621160471147-c5be030e199b?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMxMTEzMw&ixlib=rb-1.2.1&q=85&height=480">
+                </div>
+                <div class="Card__main">
+                    <h2 class="Card__heading"><a class="Card__link" href="#">Prefer 1/1 aspect ratio</a></h2>
+                    <p>This is a generic card pattern.</p>
+                </div>
+            </article>
+            <!--/Card-->
+            <article class="Card Card--overlay Card--wide" id="card-2">
+                <div class="Card__media">
+                    <img class="Card__image" alt="Card image description" width="720" height="480" loading="lazy" src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMxMTE5MA&ixlib=rb-1.2.1&q=85&height=480">
+                </div>
+                <div class="Card__main">
+                    <h2 class="Card__heading"><a class="Card__link" href="#">Prefer 16/9 aspect ratio</a></h2>
+                    <p>This is a generic card pattern.</p>
+                </div>
+            </article>
+            <!--/Card-->
+            <article class="Card Card--overlay Card--portrait" id="card-3">
+                <div class="Card__media">
+                    <img class="Card__image" alt="Card image description" width="360" height="480" loading="lazy" src="https://images.unsplash.com/photo-1621131179929-426cfb7ce409?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMxMTAzNw&ixlib=rb-1.2.1&q=85&height=480">
+                </div>
+                <div class="Card__main">
+                    <h2 class="Card__heading"><a class="Card__link" href="#">Prefer 3/4 aspect ratio</a></h2>
+                    <p>This is a generic card pattern.</p>
+                </div>
+            </article>
+            <!--/Card-->
+            <article class="Card Card--overlay Card--photo" id="card-4">
+                <div class="Card__media">
+                    <img class="Card__image" alt="Card image description" width="708" height="480" loading="lazy" src="https://images.unsplash.com/photo-1622176835604-e644073b0eab?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMxMTA3OQ&ixlib=rb-1.2.1&q=85&height=480">
+                </div>
+                <div class="Card__main">
+                    <h2 class="Card__heading"><a class="Card__link" href="#">Prefer 4/3 aspect ratio</a></h2>
+                    <p>This is a generic card pattern.</p>
+                </div>
+            </article>
+            <!--/Card-->
+            <article class="Card Card--overlay Card--square" id="card-5">
+                <div class="Card__media">
+                    <img class="Card__image" alt="Card image description" width="480" height="480" loading="lazy" src="https://images.unsplash.com/photo-1622987437805-5c6f7c2609d7?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMxOTA3NA&ixlib=rb-1.2.1&q=85&height=480">
+                </div>
+                <div class="Card__main">
+                    <h2 class="Card__heading"><a class="Card__link" href="#">Prefer 1/1 aspect ratio</a></h2>
+                    <p>This is a generic card pattern.</p>
+                </div>
+            </article>
+            <!--/Card-->
+            <article class="Card Card--overlay Card--wide" id="card-6">
+                <div class="Card__media">
+                    <img class="Card__image" alt="Card image description" width="720" height="480" loading="lazy" src="https://images.unsplash.com/photo-1607935911096-f31f85819be7?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMyNTI1NA&ixlib=rb-1.2.1&q=85&height=480">
+                </div>
+                <div class="Card__main">
+                    <h2 class="Card__heading"><a class="Card__link" href="#">Prefer 16/9 aspect ratio</a></h2>
+                    <p>This is a generic card pattern.</p>
+                </div>
+            </article>
+            <!--/Card-->
+            <article class="Card Card--overlay Card--portrait" id="card-7">
+                <div class="Card__media">
+                    <img class="Card__image" alt="Card image description" width="360" height="480" loading="lazy" src="https://images.unsplash.com/photo-1622595522218-f318265a40f4?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMxOTE1Ng&ixlib=rb-1.2.1&q=85&height=480">
+                </div>
+                <div class="Card__main">
+                    <h2><a class="Card__link" href="#">Prefer 3/4 aspect ratio</a></h2>
+                    <p>This is a generic card pattern.</p>
+                </div>
+            </article>
+            <!--/Card-->
+            <article class="Card Card--overlay Card--photo" id="card-8">
+                <div class="Card__media">
+                    <img class="Card__image" alt="Card image description" width="708" height="480" loading="lazy" src="https://images.unsplash.com/photo-1621045246196-4c7ce9092d3a?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMxOTIyOQ&ixlib=rb-1.2.1&q=85&height=480">
+                </div>
+                <div class="Card__main">
+                    <h2><a class="Card__link" href="#">Prefer 4/3 aspect ratio</a></h2>
+                    <p>This is a generic card pattern.</p>
+                </div>
+            </article>
+            <!--/Card-->
+        </section>
+        <!--/Carousel-->
 
-                <h2>Trending
-                </h2>
-
+        <nav class="Pagination">
+            <h2 class="Hidden">Carousel Navigation</h2>
+            <button class="Arrow" type="button" aria-controls="carousel" disabled>
+            <svg width="16" height="16" viewBox="0 0 16 16" role="presentation">
+              <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+            </svg>
+            <span class="Hidden">Previous slide</span>
+          </button>
+            <button class="Arrow" type="button" aria-controls="carousel" disabled>
+            <svg width="16" height="16" viewBox="0 0 16 16" role="presentation">
+              <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+            </svg>
+            <span class="Hidden">Next slide</span>
+          </button>
+            <div class="Dots">
+                <a href="#card-1" class="Dot" tabindex="-1"><span class="Hidden">Slide 1</span></a>
+                <a href="#card-2" class="Dot" tabindex="-1"><span class="Hidden">Slide 2</span></a>
+                <a href="#card-3" class="Dot" tabindex="-1"><span class="Hidden">Slide 3</span></a>
+                <a href="#card-4" class="Dot" tabindex="-1"><span class="Hidden">Slide 4</span></a>
+                <a href="#card-5" class="Dot" tabindex="-1"><span class="Hidden">Slide 5</span></a>
+                <a href="#card-6" class="Dot" tabindex="-1"><span class="Hidden">Slide 6</span></a>
+                <a href="#card-7" class="Dot" tabindex="-1"><span class="Hidden">Slide 7</span></a>
+                <a href="#card-8" class="Dot" tabindex="-1"><span class="Hidden">Slide 8</span></a>
             </div>
-        </div>
-        <i id="redirectLink">
-        <div class="card"></i>
+        </nav>
+        <!--/Pagination-->
 
-        <div class="card-content" href="New.html">
-            <h2>Featured</h2>
-            <p>Hot right now</p>
-        </div>
-    </div>
-    <i id="redirectLink">
-    <div class="card">
-        </i>
 
-    <div class="card-content" href="featured.html">
-        <h2>More</h2>
-        <p>Experience our products</p>
-    </div>
-    </div>
-    </div>
-    <div class="support-icon">
-        <a href="#" class="support-chat-icon">Chat with Support</a>
-    </div>
+    </main>
+    <!--/Main-->
     <footer class="site-footer">
         <div class="footer-content">
             <div class="copyright">
@@ -167,29 +181,16 @@
                 Support: <a href="mailto:support@example.com">support@Bloom9ja.com</a>---
             </div>--->
     </footer>
-    <script src="index.js"></script>
+
     <script>
         // Disable right-click context menu
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
         });
     </script>
-    <script>
-        // Get a reference to the <i> element by its id
-        const redirectLink = document.getElementById('redirectLink');
 
-        // Add a click event listener to the <i> element
-        redirectLink.addEventListener('click', function() {
-            // Specify the URL you want to redirect to
-            const redirectURL = 'music.html'; // Replace with your desired URL
-
-            // Redirect to the specified URL
-            window.location.href = redirectURL;
-        });
-    </script>
-
-
-
+    <script src="index.js"></script>
+    <script src="feed.js"></script>
 </body>
 
 </html>

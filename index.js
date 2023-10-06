@@ -124,3 +124,63 @@ checkoutButton.addEventListener("click", function() {
     const shippingForm = document.getElementById("shipping-form");
     shippingForm.submit(); // Trigger the shipping form submission
 });
+// JavaScript for slideshow
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    const slides = document.getElementsByClassName("mySlides");
+    const dots = document.getElementsByClassName("dot");
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slideIndex++;
+
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].classList.add("active");
+
+    setTimeout(showSlides, 5000); // Change the duration (in milliseconds) as needed
+}
+
+
+// Page Load Animation
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+});
+
+// Scroll Animation for Posts
+const posts = document.querySelectorAll('.post');
+
+window.addEventListener('scroll', () => {
+    const triggerBottom = (window.innerHeight / 5) * 4; // Adjust as needed
+
+    posts.forEach((post) => {
+        const postTop = post.getBoundingClientRect().top;
+
+        if (postTop < triggerBottom) {
+            post.classList.add('show');
+        } else {
+            post.classList.remove('show');
+        }
+    });
+});
+
+// Functionality for "Read More" links
+const readMoreLinks = document.querySelectorAll('.post a');
+
+readMoreLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Implement your custom functionality here for post: ' + link.parentNode.querySelector('h2').textContent);
+    });
+});
