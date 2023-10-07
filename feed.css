@@ -328,6 +328,11 @@ a,
     }
 }
 
+main.main {
+    margin-top: 20px;
+    position: relative;
+}
+
 .Card--overlay {
     --card-shadow-color: var(--theme-black);
     --card-foreground-color: var(--theme-white);
