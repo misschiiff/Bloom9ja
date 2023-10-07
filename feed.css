@@ -117,18 +117,6 @@ a,
     }
 }
 
-// Not a perfect fix but looks better in Safari 14
-@supports not (aspect-ratio: 1/1) {
-    .Carousel {
-        .Card__media {
-            padding-block-end: 0 !important;
-        }
-        .Card__image {
-            position: relative !important;
-        }
-    }
-}
-
 
 /* Safari and iPhone aspect ratio support */
 
