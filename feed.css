@@ -96,6 +96,23 @@ a,
     }
 }
 
+@media (max-width: 768px) {
+    .Carousel {
+        height: auto;
+        /* or any other height appropriate for mobile */
+    }
+}
+
+
+/* Adjust the .Carousel height for mobile screens */
+
+@media (max-width: 768px) {
+    .Carousel {
+        height: auto;
+        /* Set an appropriate height for mobile screens */
+    }
+}
+
 // Not a perfect fix but looks better in Safari 14
 @supports not (aspect-ratio: 1/1) {
     .Carousel {
