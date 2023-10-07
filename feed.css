@@ -469,3 +469,33 @@ img {
         font-weight: 500;
     }
 }
+
+
+/* Safari 14 specific fix for aspect-ratio */
+
+@supports not (aspect-ratio: 1/1) {
+    .Card__media {
+        padding-block-end: 0 !important;
+    }
+    .Card__image {
+        position: relative !important;
+    }
+}
+
+
+/* Your existing CSS code */
+
+
+/* Safari 14 specific fix for aspect-ratio */
+
+@supports not (aspect-ratio: 1/1) {
+    .Card__media {
+        padding-block-end: 0 !important;
+    }
+    .Card__image {
+        position: relative !important;
+    }
+}
+
+
+/* Rest of your CSS code */
