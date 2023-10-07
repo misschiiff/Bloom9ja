@@ -196,4 +196,7 @@ function setCardHeights() {
 
 // Call the function to set card heights initially and on window resize
 setCardHeights();
-window.addEventListener('resize', setCardHeights);
+window.addEventListener('resize', setCardHeights); // Detect support for aspect-ratio property
+if (window.CSS.supports('aspect-ratio: 1/1')) {
+    document.documentElement.classList.remove('no-aspect-ratio-support');
+}

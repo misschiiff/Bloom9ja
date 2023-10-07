@@ -125,6 +125,16 @@ a,
     }
 }
 
+
+/* Safari and iPhone aspect ratio support */
+
+@supports not (aspect-ratio: 1/1) {
+    .no-aspect-ratio-support .Card__media[data-ratio="16/9"] {
+        padding-bottom: calc(9 / 16 * 100%);
+        /* 16:9 aspect ratio */
+    }
+}
+
 .Dots {
     align-items: center;
     display: flex;
