@@ -183,3 +183,17 @@
         });
     });
 })();
+// Function to set card heights based on aspect ratio
+function setCardHeights() {
+    const cards = document.querySelectorAll('.Card');
+    cards.forEach((card) => {
+        const ratio = card.getAttribute('data-ratio').split('/');
+        const width = card.offsetWidth;
+        const height = (width * ratio[1]) / ratio[0];
+        card.style.height = height + 'px';
+    });
+}
+
+// Call the function to set card heights initially and on window resize
+setCardHeights();
+window.addEventListener('resize', setCardHeights);
