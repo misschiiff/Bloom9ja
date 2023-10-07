@@ -16,15 +16,19 @@
     box-sizing: border-box;
 }
 
+h2 {
+    color: green;
+}
+
 a {
     color: hsl(var(--theme-blue));
     transition: color 150ms, text-decoration-color 150ms;
     &:active,
     &:visited {
-        color: hsl(var(--theme-blue));
+        color: hsl(var(--theme-black));
     }
     &:hover {
-        color: hsl(var(--theme-red));
+        color: hsl(var(--theme-green));
     }
     &:focus,
     &:hover {
